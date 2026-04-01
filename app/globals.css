@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --font-orbitron: var(--font-orbitron);
+  --font-exo: var(--font-exo);
+  --font-nunito: var(--font-nunito);
+}
+
+@keyframes rotate-slow {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes rotate-slow-rev {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+  @keyframes shine {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 120%;
+    }
+  }
+  
+  .animate-shine {
+    animation: shine 2s linear infinite;
+  }
+  
+  
+  .animate-rotate-slow {
+    animation: rotate-slow 40s linear infinite;
+  }
+  
+  .animate-rotate-slow-rev {
+    animation: rotate-slow-rev 45s linear infinite;
+  }
+  
