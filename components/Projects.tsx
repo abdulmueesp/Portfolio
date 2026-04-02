@@ -5,41 +5,45 @@ const dummyProjects = [
     {
         id: 1,
         name: "Question Bank & Paper Generator",
-        company: "Team Project @ Bairuha Tech",
-        image: "/dummy-project-1.jpg",
-        description: "A robust scalable e-commerce solution built for high traffic with complete inventory management, payment gateway integration, and responsive design. This project was developed as part of a core team, focusing on modern frontend and robust backend workflows.",
+        company: "Freelance Project",
+        image: "/question.jpeg",
+        description: "A system to organize questions and generate question papers with role-based access for schools.",
         keyContributions: [
-            "Developed fully responsive UI with React and Tailwind CSS.",
-            "Integrated payment gateway for seamless transactions.",
-            "Architected scalable backend APIs using Node.js and PostgreSQL."
+            "Designed and managed a structured question bank for subjects, books, chapters, and questions",
+            "Developed dynamic question paper generation with flexible question selection",
+            "Implemented role-based access for schools with controlled content distribution",
+            "Enabled downloadable question papers in Word format for easy use"
         ],
-        techStack: ["React", "Node.js", "PostgreSQL", "Tailwind CSS"],
+        techStack: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
     },
     {
         id: 2,
-        name: "Real-Time Chat App",
+        name: "Suprabhaatham News Portal",
         company: "Team Project @ Bairuha Tech",
-        image: "/dummy-project-3.jpg",
-        description: "A sophisticated real-time messaging application capable of handling thousands of concurrent users. Included feature sets like channels, direct messaging, typing indicators, and file sharing with seamless WebSockets integration.",
+        image: "/suprabhatham.png",
+        description: "A digital news portal delivering real-time updates across Gulf and Indian regions with a structured and user-friendly content experience.",
         keyContributions: [
-            "Implemented real-time bidirectional communication via WebSockets.",
-            "Developed group channels, typing indicators, and file sharing features.",
-            "Optimized database schemas for message persistence in PostgreSQL."
+            "Developed a cron-based automation system for scheduled publishing of news and e-paper editions",
+            "Enabled time-driven auto-release of content including daily and weekly editions",
+            "Improved reliability of content delivery by eliminating manual publishing delays",
+            "Enhanced UI for better content visibility and user experience"
         ],
-        techStack: ["NestJS", "Next.js", "Socket.io", "PostgreSQL"],
+        techStack: ["Next.js", "React", "Sass", "Strapi"],
     },
     {
         id: 3,
-        name: "Book Publishing Portal",
-        company: "Freelance Project",
-        image: "/dummy-project-2.jpg",
-        description: "An independently designed and developed software solution for a book publishing company. Involved architecture, API design, and a complete UI tailored for authors and editors. Features a custom CMS, automated email notifications, and detailed analytics.",
+        name: "Online booking platform-homesloc",
+        company: "Team Project @ Bairuha Tech",
+        image: "/homesloc.jpeg",
+        description: "A multi-service booking platform for reserving hotels, convention halls, and tourist packages.",
         keyContributions: [
-            "Designed and built the complete frontend tailored for authors and editors.",
-            "Developed a full custom CMS for managing book releases and analytics.",
-            "Implemented automated email notifications for system events."
+            "Built a responsive frontend for multi-service booking including hotels, halls, and tourist packages",
+            "Designed smooth booking workflows for enhanced user experience",
+            "Integrated secure payment gateway using Razorpay",
+            "Implemented a role-based admin panel for managing bookings and services",
+            "Improved SEO with optimized and structured frontend implementation"
         ],
-        techStack: ["React", "Express.js", "MongoDB", "Redux"],
+        techStack: ["React", "Next.js", "Tailwind CSS"],
     },
 
 ];
@@ -79,12 +83,8 @@ const Projects = () => {
                                     boxShadow: "inset 5px 5px 10px rgba(0,0,0,0.05), inset -5px -5px 10px #ffffff"
                                 }}
                             >
-                                {/* Replace the placeholder text with your real image when ready */}
-                                <div className="absolute inset-0 flex items-center justify-center p-4 text-center text-gray-500 font-nunito font-semibold">
-                                    [Image: {project.image}]<br />
-                                    Insert `&lt;img src="..." /&gt;` here.
-                                </div>
-                                {/* <img src={project.image} alt={project.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" /> */}
+                                {/* Real Image rendering */}
+                                <img src={project.image} alt={project.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                             </div>
 
                             {/* Project Details */}
@@ -118,7 +118,7 @@ const Projects = () => {
             {selectedProject && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/60 backdrop-blur-sm transition-opacity">
                     <div
-                        className="relative w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-[2rem] bg-[#F3F4F6] p-6 lg:p-10"
+                        className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-[2rem] bg-[#F3F4F6] p-6 lg:p-10"
                         style={{
                             boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.4)"
                         }}
@@ -134,34 +134,23 @@ const Projects = () => {
                             <X size={20} className="font-bold" />
                         </button>
 
-                        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 mt-6 lg:mt-0">
-                            {/* Modal Image Area */}
-                            <div className="w-full lg:w-1/2 flex-shrink-0">
-                                <div
-                                    className="w-full h-[250px] sm:h-[350px] lg:h-[400px] rounded-2xl bg-gray-200 overflow-hidden relative"
-                                    style={{
-                                        boxShadow: "inset 5px 5px 10px rgba(0,0,0,0.05), inset -5px -5px 10px #ffffff"
-                                    }}
-                                >
-                                    {/* Replace the placeholder text with your real image when ready */}
-                                    <div className="absolute inset-0 flex items-center justify-center p-6 text-center text-gray-500 font-nunito font-semibold bg-gray-100">
-                                        [Image: {selectedProject.image}]<br /><br />
-                                        Remove this div and uncomment the img tag below when ready!
-                                    </div>
-                                    {/* <img src={selectedProject.image} alt={selectedProject.name} className="w-full h-full object-cover" /> */}
-                                </div>
-                            </div>
-
-                            {/* Modal Content Area */}
-                            <div className="w-full lg:w-1/2 flex flex-col justify-center">
+                        <div className="flex flex-col mt-6 lg:mt-2">
+                            {/* Modal Content Area (Full Width) */}
+                            <div className="w-full flex flex-col justify-center">
                                 <h3 className="text-3xl md:text-4xl font-bold font-orbitron text-gray-800 mb-3">
                                     {selectedProject.name}
                                 </h3>
 
                                 {selectedProject.company && (
-                                    <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold font-nunito w-fit mb-6 bg-gray-200 text-gray-700 shadow-sm border border-gray-300">
+                                    <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold font-nunito w-fit mb-4 bg-gray-200 text-gray-700 shadow-sm border border-gray-300">
                                         {selectedProject.company}
                                     </span>
+                                )}
+
+                                {selectedProject.description && (
+                                    <p className="font-nunito text-gray-600 text-[1.05rem] leading-relaxed mb-8">
+                                        {selectedProject.description}
+                                    </p>
                                 )}
 
                                 {selectedProject.keyContributions && selectedProject.keyContributions.length > 0 && (
