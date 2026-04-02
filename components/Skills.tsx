@@ -10,7 +10,7 @@ const skillsData = [
     {
         category: "Frontend",
         icon: <Monitor className="w-6 h-6 text-rose-500" />,
-        skills: ["React.js", "Next.js", "Redux", "Tailwind CSS", "Bootstrap", "Sass"]
+        skills: ["React.js", "Next.js", "Redux", "Tailwind CSS", "Bootstrap", "Sass", "Three.js"]
     },
     {
         category: "Backend",
@@ -25,13 +25,13 @@ const skillsData = [
     {
         category: "Tools & Others",
         icon: <Wrench className="w-6 h-6 text-rose-500" />,
-        skills: ["Git", "GitHub"]
+        skills: ["Git", "GitHub", "Postman", "Figma"]
     }
 ];
 
 const Skills = () => {
     return (
-        <section className="w-full py-16 md:py-24 px-6 md:px-10 lg:px-20 bg-[#F3F4F6] flex justify-center">
+        <section className="w-full py-10 md:py-16 px-6 md:px-10 lg:px-20 bg-[#F3F4F6] flex justify-center">
             <div className="w-full max-w-7xl">
                 <div className="flex flex-col items-center mb-16 text-center">
                     <h2 className="text-3xl md:text-5xl font-bold font-orbitron text-gray-800 mb-4">

@@ -14,7 +14,7 @@ const Contact = () => {
     };
 
     return (
-        <section className="w-full py-16 md:py-24 px-6 md:px-10 lg:px-20 bg-[#F3F4F6] flex justify-center">
+        <section className="w-full pt-16 md:pt-24 pb-[5px] px-6 md:px-10 lg:px-20 bg-[#F3F4F6] flex flex-col items-center">
             {/* Master Single Box */}
             <div
                 className="w-full max-w-6xl p-8 md:p-12 lg:p-16 rounded-[2.5rem] bg-[#F3F4F6]"
@@ -110,6 +110,11 @@ const Contact = () => {
                         <RubiksCube />
                     </div>
                 </div>
+            </div>
+
+            {/* Footer Copyright */}
+            <div className="mt-12 text-center text-gray-400 text-sm md:text-base font-nunito font-semibold tracking-wide">
+                &copy; 2026 abdul muees. All rights reserved.
             </div>
         </section>
     );

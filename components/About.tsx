@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => {
     return (
-        <section className="w-full py-16 md:py-24 px-6 md:px-10 lg:px-20 bg-[#F3F4F6] flex justify-center">
+        <section className="w-full  py-10 md:py-16 px-6 md:px-10 lg:px-20 bg-[#F3F4F6] flex justify-center border">
             <div
                 className="w-full max-w-7xl rounded-[2.5rem] p-8 md:p-14 lg:p-20 bg-[#F3F4F6]"
                 style={{
@@ -16,9 +16,9 @@ const About = () => {
                     <div className="w-24 h-1.5 bg-gradient-to-r from-rose-600 to-rose-400 rounded-full mb-10"></div>
 
                     <p className="font-nunito text-gray-600 text-base md:text-lg lg:text-xl leading-relaxed max-w-4xl text-center">
-                        I am a passionate Full Stack Developer with 1.6+ years of experience, including 1 year and 2 months at Bairuha Tech, where I worked on building scalable and performance-driven web applications. During my time there, I contributed to developing responsive front-end interfaces and robust backend systems using modern technologies like React, Next.js, Node.js, and NestJS.
+                        I am a passionate Full Stack Developer with 1.9+ years of professional experience across modern web technologies. I previously worked for 1 year and 2 months at Bairuha Tech, where I contributed to developing responsive, scalable front-end interfaces and robust backend systems using React, Next.js, Node.js, and NestJS.
                         <br /><br />
-                        Alongside my professional experience, I have also worked as a freelance developer, where I independently designed and developed a complete software solution for a book publishing company—handling everything from database architecture to backend APIs and frontend implementation. I enjoy solving real-world problems through clean, efficient code and delivering reliable, user-friendly digital products. I am always eager to learn new technologies and continuously improve my skills to build modern and impactful web applications.
+                        Currently, I am working at Ezebit Digital Solutions, where I continue to architect and orchestrate performance-driven web applications. I thrive on solving complex real-world problems through clean, efficient code and delivering reliable, user-friendly digital products. With a strong commitment to learning and adapting to new technologies, I am dedicated to building impactful digital experiences.
                     </p>
                 </div>
             </div>
