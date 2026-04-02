@@ -100,12 +100,12 @@ export default function HelpBoat() {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end pointer-events-none">
       
       {/* --- Chat Window --- */}
       <div 
         className={`bg-white w-[90vw] md:w-[380px] h-[550px] max-h-[80vh] rounded-[2rem] shadow-2xl flex flex-col overflow-hidden transition-all duration-500 transform origin-bottom-right mb-4 border border-gray-100 ${
-          isOpen ? "scale-100 opacity-100 translate-y-0" : "scale-0 opacity-0 translate-y-10 pointer-events-none"
+          isOpen ? "scale-100 opacity-100 translate-y-0 pointer-events-auto" : "scale-0 opacity-0 translate-y-10 pointer-events-none"
         }`}
       >
         {/* Header (Gradient UI) */}
@@ -218,7 +218,7 @@ export default function HelpBoat() {
       {/* --- Floating Toggle Button --- */}
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-[0_10px_25px_-5px_rgba(147,51,234,0.5)] flex items-center justify-center hover:scale-110 hover:-translate-y-1 transition-all duration-300 z-50 group"
+        className="pointer-events-auto w-14 h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-[0_10px_25px_-5px_rgba(147,51,234,0.5)] flex items-center justify-center hover:scale-110 hover:-translate-y-1 transition-all duration-300 z-50 group"
       >
         {isOpen ? (
           <X size={28} className="group-hover:rotate-90 transition-transform duration-300" />

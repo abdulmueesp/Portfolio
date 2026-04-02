@@ -2,31 +2,31 @@ import React from 'react';
 import { Code2, Monitor, Server, Database, Wrench, BadgeCheck } from 'lucide-react';
 
 const skillsData = [
-  {
-    category: "Languages",
-    icon: <Code2 className="w-6 h-6 text-rose-500" />,
-    skills: ["JavaScript", "TypeScript", "HTML5", "CSS3"]
-  },
-  {
-    category: "Frontend",
-    icon: <Monitor className="w-6 h-6 text-rose-500" />,
-    skills: ["React.js", "Next.js", "Redux", "Tailwind CSS", "Bootstrap", "Sass"]
-  },
-  {
-    category: "Backend",
-    icon: <Server className="w-6 h-6 text-rose-500" />,
-    skills: ["Node.js", "Express.js", "NestJS"]
-  },
-  {
-    category: "Databases",
-    icon: <Database className="w-6 h-6 text-rose-500" />,
-    skills: ["PostgreSQL", "MongoDB"]
-  },
-  {
-    category: "Tools & Others",
-    icon: <Wrench className="w-6 h-6 text-rose-500" />,
-    skills: ["Git", "GitHub"]
-  }
+    {
+        category: "Languages",
+        icon: <Code2 className="w-6 h-6 text-rose-500" />,
+        skills: ["JavaScript", "TypeScript", "HTML5", "CSS3"]
+    },
+    {
+        category: "Frontend",
+        icon: <Monitor className="w-6 h-6 text-rose-500" />,
+        skills: ["React.js", "Next.js", "Redux", "Tailwind CSS", "Bootstrap", "Sass"]
+    },
+    {
+        category: "Backend",
+        icon: <Server className="w-6 h-6 text-rose-500" />,
+        skills: ["Node.js", "Express.js", "NestJS"]
+    },
+    {
+        category: "Databases",
+        icon: <Database className="w-6 h-6 text-rose-500" />,
+        skills: ["PostgreSQL", "MongoDB"]
+    },
+    {
+        category: "Tools & Others",
+        icon: <Wrench className="w-6 h-6 text-rose-500" />,
+        skills: ["Git", "GitHub"]
+    }
 ];
 
 const Skills = () => {
@@ -42,7 +42,7 @@ const Skills = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {skillsData.map((group, index) => (
-                        <div 
+                        <div
                             key={index}
                             className="p-8 rounded-[2rem] bg-[#F3F4F6] flex flex-col"
                             style={{
@@ -50,7 +50,7 @@ const Skills = () => {
                             }}
                         >
                             <div className="flex items-center space-x-5 mb-8">
-                                <div 
+                                <div
                                     className="w-14 h-14 rounded-2xl bg-[#F3F4F6] flex items-center justify-center flex-shrink-0"
                                     style={{
                                         boxShadow: "inset 5px 5px 10px rgba(0,0,0,0.05), inset -5px -5px 10px #ffffff"
@@ -60,10 +60,10 @@ const Skills = () => {
                                 </div>
                                 <h3 className="text-xl font-bold font-orbitron text-gray-800">{group.category}</h3>
                             </div>
-                            
+
                             <div className="flex flex-wrap gap-4">
                                 {group.skills.map((skill, idx) => (
-                                    <div 
+                                    <div
                                         key={idx}
                                         className="flex items-center space-x-2 px-4 py-2.5 rounded-xl bg-[#F3F4F6] transition-all hover:-translate-y-1 hover:text-rose-600 cursor-default group"
                                         style={{
